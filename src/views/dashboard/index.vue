@@ -9,7 +9,9 @@
               With supporting text below as a natural lead-in to additional
               content.
             </p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <a href="#" class="btn btn-primary"> </a>
+            <h1><font-awesome-icon :icon="['fas', 'house']" />sss</h1>
+            <font-awesome-icon :icon="['fas', 'faBook']" />
           </div>
         </div>
       </div>

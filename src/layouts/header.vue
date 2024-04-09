@@ -1,6 +1,6 @@
 <template>
   <div class="main_container">
-    <h1>Header</h1>
+    <h1>Header <font-awesome-icon :icon="['fas', 'user']" /></h1>
     <Nav></Nav>
 
     <router-view></router-view>
