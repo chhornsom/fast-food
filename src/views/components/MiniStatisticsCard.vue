@@ -31,7 +31,7 @@ export default {
   name: "MiniStatisticsCard",
   data() {
     return {
-      reverseDirection: "flex-row-reverse justify-content-between",
+      reverseDirection: "flex-row-reverse justify-content-between"
     };
   },
   props: {
@@ -39,11 +39,11 @@ export default {
       type: Object,
       required: true,
       text: String,
-      value: [Number, String],
+      value: [Number, String]
     },
     detail: {
       type: String,
-      default: "",
+      default: ""
     },
     icon: {
       type: Object,
@@ -53,16 +53,16 @@ export default {
       background: String,
       default: () => ({
         color: "text-white",
-        background: "success",
-      }),
+        background: "success"
+      })
     },
     directionReverse: {
       type: Boolean,
-      default: false,
-    },
+      default: false
+    }
   },
   computed: {
-    ...mapState(["isRTL"]),
-  },
+    ...mapState(["isRTL"])
+  }
 };
 </script>

@@ -26,21 +26,21 @@ export default {
   props: {
     refer: {
       type: String,
-      required: true,
+      required: true
     },
     miniIcon: {
       type: String,
-      required: true,
+      required: true
     },
     text: {
       type: String,
-      required: true,
-    },
+      required: true
+    }
   },
   data() {
     return {
-      isExpanded: false,
+      isExpanded: false
     };
-  },
+  }
 };
 </script>

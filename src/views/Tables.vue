@@ -671,6 +671,6 @@
 
 <script>
 export default {
-  name: "tables",
+  name: "tables"
 };
 </script>

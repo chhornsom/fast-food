@@ -193,7 +193,7 @@ export default {
   name: "navbar",
   data() {
     return {
-      showMenu: false,
+      showMenu: false
     };
   },
   props: ["minNav", "color"],
@@ -205,18 +205,18 @@ export default {
 
     toggleSidebar() {
       this.navbarMinimize();
-    },
+    }
   },
   components: {
     Breadcrumbs,
-    MaterialInput,
+    MaterialInput
   },
   computed: {
     ...mapState(["isRTL", "isAbsolute"]),
 
     currentRouteName() {
       return this.$route.name;
-    },
-  },
+    }
+  }
 };
 </script>

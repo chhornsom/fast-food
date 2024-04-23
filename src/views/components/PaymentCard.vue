@@ -76,13 +76,13 @@ import img2 from "@/assets/img/logos/visa.png";
 export default {
   name: "payment-card",
   components: {
-    MaterialButton,
+    MaterialButton
   },
   data() {
     return {
       img1,
-      img2,
+      img2
     };
-  },
+  }
 };
 </script>

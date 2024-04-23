@@ -22,16 +22,16 @@ export default {
   props: {
     title: {
       type: String,
-      default: "",
+      default: ""
     },
     description: {
       type: String,
-      default: "",
+      default: ""
     },
     darkMode: {
       type: Boolean,
-      default: false,
-    },
-  },
+      default: false
+    }
+  }
 };
 </script>

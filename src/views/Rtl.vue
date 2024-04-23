@@ -268,7 +268,7 @@ export default {
     MiniStatisticsCard,
     ProjectCard,
     TimelineList,
-    TimelineItem,
+    TimelineItem
   },
   data() {
     return {
@@ -281,7 +281,7 @@ export default {
       logoSlack,
       logoSpotify,
       logoJira,
-      logoInvision,
+      logoInvision
     };
   },
   beforeMount() {
@@ -295,6 +295,6 @@ export default {
     document.querySelector("html").removeAttribute("lang");
     document.querySelector("html").removeAttribute("dir");
     document.querySelector("#app").classList.remove("rtl");
-  },
+  }
 };
 </script>

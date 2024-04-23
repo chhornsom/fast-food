@@ -1,3 +1,4 @@
+<!-- eslint-disable prefer-const -->
 <template>
   <div
     class="input-group"
@@ -27,52 +28,52 @@ export default {
   props: {
     variant: {
       type: String,
-      default: "outline",
+      default: "outline"
     },
     label: {
       type: String,
-      default: "",
+      default: ""
     },
     size: {
       type: String,
-      default: "default",
+      default: "default"
     },
     success: {
       type: Boolean,
-      default: false,
+      default: false
     },
     error: {
       type: Boolean,
-      default: false,
+      default: false
     },
     disabled: {
       type: Boolean,
-      default: false,
+      default: false
     },
     name: {
       type: String,
-      default: "",
+      default: ""
     },
     id: {
       type: String,
-      required: true,
+      required: true
     },
     value: {
       type: String,
-      default: "",
+      default: ""
     },
     placeholder: {
       type: String,
-      default: "",
+      default: ""
     },
     type: {
       type: String,
-      default: "text",
+      default: "text"
     },
     isRequired: {
       type: Boolean,
-      default: false,
-    },
+      default: false
+    }
   },
   emits: ["update:value"],
   mounted() {
@@ -80,9 +81,7 @@ export default {
   },
   methods: {
     getClasses: (size) => {
-      let sizeValue;
-
-      sizeValue = size ? `form-control-${size}` : null;
+      const sizeValue = size ? `form-control-${size}` : null;
 
       return sizeValue;
     },
@@ -98,7 +97,7 @@ export default {
       }
 
       return isValidValue;
-    },
-  },
+    }
+  }
 };
 </script>

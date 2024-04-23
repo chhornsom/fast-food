@@ -29,27 +29,27 @@ export default {
       type: [String, Object],
       required: true,
       component: {
-        type: String,
+        type: String
       },
       background: {
-        type: String,
+        type: String
       },
       default: () => ({
-        background: "bg-white",
-      }),
+        background: "bg-white"
+      })
     },
     title: {
       type: String,
-      required: true,
+      required: true
     },
     description: {
       type: String,
-      default: "",
+      default: ""
     },
     value: {
       type: [String, Number],
-      default: "",
-    },
-  },
+      default: ""
+    }
+  }
 };
 </script>

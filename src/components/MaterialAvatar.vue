@@ -14,33 +14,33 @@ export default {
   props: {
     img: {
       type: String,
-      required: true,
+      required: true
     },
     alt: {
       type: String,
-      default: "",
+      default: ""
     },
     size: {
       type: String,
-      default: "",
+      default: ""
     },
     shadow: {
       type: String,
-      default: "",
+      default: ""
     },
     borderRadius: {
       type: String,
-      default: "",
+      default: ""
     },
     circular: {
       type: Boolean,
-      default: false,
-    },
+      default: false
+    }
   },
   methods: {
     getSize: (size) => (size ? `avatar-${size}` : null),
     getClasses: (shadow, circular, borderRadius) => {
-      let shadowValue, circularValue, borderRadiusValue;
+      let shadowValue
 
       if (shadow) {
         shadowValue = shadow === "regular" ? "shadow" : `shadow-${shadow}`;
@@ -48,12 +48,12 @@ export default {
         shadowValue = null;
       }
 
-      circularValue = circular ? "rounded-circle" : null;
+      const circularValue = circular ? "rounded-circle" : null;
 
-      borderRadiusValue = borderRadius ? `border-radius-${borderRadius}` : null;
+      const borderRadiusValue = borderRadius ? `border-radius-${borderRadius}` : null;
 
       return `${shadowValue} ${circularValue} ${borderRadiusValue}`;
-    },
-  },
+    }
+  }
 };
 </script>

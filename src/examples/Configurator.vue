@@ -180,8 +180,8 @@ export default {
     },
 
     sidenavTypeOnResize() {
-      let transparent = document.querySelector("#btn-transparent");
-      let white = document.querySelector("#btn-white");
+      const transparent = document.querySelector("#btn-transparent");
+      const white = document.querySelector("#btn-white");
       if (window.innerWidth < 1200) {
         transparent.classList.add("disabled");
         white.classList.add("disabled");
@@ -189,18 +189,18 @@ export default {
         transparent.classList.remove("disabled");
         white.classList.remove("disabled");
       }
-    },
+    }
   },
   computed: {
     ...mapState(["isRTL", "sidebarType"]),
     sidenavResponsive() {
       return this.sidenavTypeOnResize;
-    },
+    }
   },
   beforeMount() {
     this.$store.state.isTransparent = "bg-transparent";
     window.addEventListener("resize", this.sidenavTypeOnResize);
     window.addEventListener("load", this.sidenavTypeOnResize);
-  },
+  }
 };
 </script>

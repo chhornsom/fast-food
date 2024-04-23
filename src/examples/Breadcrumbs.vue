@@ -32,15 +32,15 @@ export default {
   props: {
     currentPage: {
       type: String,
-      required: "",
+      required: ""
     },
     color: {
       type: String,
-      default: "text-dark",
-    },
+      default: "text-dark"
+    }
   },
   computed: {
-    ...mapState(["isRTL"]),
-  },
+    ...mapState(["isRTL"])
+  }
 };
 </script>

@@ -20,20 +20,20 @@ export default {
   props: {
     name: {
       type: String,
-      required: true,
+      required: true
     },
     id: {
       type: String,
-      required: true,
+      required: true
     },
     checked: {
       type: Boolean,
-      default: false,
+      default: false
     },
     labelClass: {
       type: String,
-      default: "",
-    },
-  },
+      default: ""
+    }
+  }
 };
 </script>

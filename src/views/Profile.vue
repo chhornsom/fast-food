@@ -595,14 +595,14 @@ export default {
       team3,
       team4,
       img2,
-      img3,
+      img3
     };
   },
   components: {
     ProfileInfoCard,
     DefaultProjectCard,
     MaterialSwitch,
-    MaterialAvatar,
+    MaterialAvatar
   },
 
   mounted() {
@@ -612,6 +612,6 @@ export default {
   },
   beforeUnmount() {
     this.$store.state.isAbsolute = false;
-  },
+  }
 };
 </script>

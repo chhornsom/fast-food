@@ -183,17 +183,17 @@ export default {
   name: "Notifications",
   components: {
     MaterialAlert,
-    MaterialSnackbar,
+    MaterialSnackbar
   },
   data() {
     return {
-      snackbar: null,
+      snackbar: null
     };
   },
   methods: {
     closeSnackbar() {
       this.snackbar = null;
-    },
-  },
+    }
+  }
 };
 </script>

@@ -29,20 +29,20 @@ export default {
   props: {
     title: {
       type: String,
-      default: "",
+      default: ""
     },
     subtitle: {
       type: String,
-      default: "",
+      default: ""
     },
     update: {
       type: String,
-      default: "",
+      default: ""
     },
     color: {
       type: String,
-      default: "primary",
-    },
-  },
+      default: "primary"
+    }
+  }
 };
 </script>

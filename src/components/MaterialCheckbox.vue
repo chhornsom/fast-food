@@ -19,13 +19,13 @@ export default {
   props: {
     name: {
       type: String,
-      default: "",
+      default: ""
     },
     id: {
       type: String,
-      default: "",
+      default: ""
     },
-    checked: Boolean,
-  },
+    checked: Boolean
+  }
 };
 </script>

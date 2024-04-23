@@ -31,26 +31,26 @@ export default {
   props: {
     color: {
       type: String,
-      default: "",
+      default: ""
     },
     icon: {
       type: Object,
       component: String,
       class: String,
-      default: () => {},
+      default: () => {}
     },
     title: {
       type: String,
-      default: "",
+      default: ""
     },
     dateTime: {
       type: String,
-      default: "",
+      default: ""
     },
     description: {
       type: String,
-      default: "",
-    },
-  },
+      default: ""
+    }
+  }
 };
 </script>

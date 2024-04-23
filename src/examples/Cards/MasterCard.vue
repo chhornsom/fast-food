@@ -47,7 +47,7 @@ import img1 from "../../assets/img/logos/mastercard.png";
 export default {
   name: "MasterCard",
   components: {
-    MaterialAvatar,
+    MaterialAvatar
   },
   props: {
     card: {
@@ -64,17 +64,17 @@ export default {
         expiryDate: "11/22",
         holderText: "Card Holder",
         expiryText: "Expires",
-        background: "dark",
-      }),
-    },
+        background: "dark"
+      })
+    }
   },
   data() {
     return {
-      img1,
+      img1
     };
   },
   computed: {
-    ...mapState(["isRTL"]),
-  },
+    ...mapState(["isRTL"])
+  }
 };
 </script>

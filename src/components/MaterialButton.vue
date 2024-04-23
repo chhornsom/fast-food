@@ -13,28 +13,28 @@ export default {
   props: {
     color: {
       type: String,
-      default: "success",
+      default: "success"
     },
     size: {
       type: String,
-      default: "md",
+      default: "md"
     },
     variant: {
       type: String,
-      default: "fill",
+      default: "fill"
     },
     fullWidth: {
       type: Boolean,
-      default: false,
+      default: false
     },
     active: {
       type: Boolean,
-      default: false,
-    },
+      default: false
+    }
   },
   methods: {
     getClasses: (variant, color, size, fullWidth, active) => {
-      let colorValue, sizeValue, fullWidthValue, activeValue;
+      let colorValue
 
       // Setting the button variant and color
       if (variant === "gradient") {
@@ -45,14 +45,14 @@ export default {
         colorValue = `btn-${color}`;
       }
 
-      sizeValue = size ? `btn-${size}` : null;
+      const sizeValue = size ? `btn-${size}` : null;
 
-      fullWidthValue = fullWidth ? `w-100` : null;
+      const fullWidthValue = fullWidth ? `w-100` : null;
 
-      activeValue = active ? `active` : null;
+      const activeValue = active ? `active` : null;
 
       return `${colorValue} ${sizeValue} ${fullWidthValue} ${activeValue}`;
-    },
-  },
+    }
+  }
 };
 </script>

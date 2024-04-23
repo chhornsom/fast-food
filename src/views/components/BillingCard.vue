@@ -117,6 +117,6 @@
 
 <script>
 export default {
-  name: "billing-card",
+  name: "billing-card"
 };
 </script>

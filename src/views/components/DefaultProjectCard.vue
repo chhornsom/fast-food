@@ -51,33 +51,33 @@ export default {
   props: {
     image: {
       type: String,
-      default: "",
+      default: ""
     },
     label: {
       type: String,
-      default: "",
+      default: ""
     },
     title: {
       type: String,
-      default: "Default Project Card",
+      default: "Default Project Card"
     },
     description: {
       type: String,
-      default: "",
+      default: ""
     },
     action: {
       type: Object,
       route: String,
       color: String,
       label: String,
-      default: () => {},
+      default: () => {}
     },
     authors: {
       type: Array,
       image: String,
       name: String,
-      default: () => [],
-    },
-  },
+      default: () => []
+    }
+  }
 };
 </script>

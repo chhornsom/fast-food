@@ -59,11 +59,11 @@ export default {
   props: {
     title: {
       type: String,
-      default: "",
+      default: ""
     },
     description: {
       type: String,
-      default: "",
+      default: ""
     },
     info: {
       type: Object,
@@ -71,22 +71,22 @@ export default {
       mobile: String,
       email: String,
       location: String,
-      default: () => {},
+      default: () => {}
     },
     social: {
       type: Array,
       link: String,
       icon: String,
-      default: () => [],
+      default: () => []
     },
     action: {
       type: Object,
       route: String,
       tooltip: String,
       default: () => ({
-        route: "javascript:;",
-      }),
-    },
-  },
+        route: "javascript:;"
+      })
+    }
+  }
 };
 </script>

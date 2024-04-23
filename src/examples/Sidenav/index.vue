@@ -41,16 +41,16 @@ import { mapState } from "vuex";
 export default {
   name: "index",
   components: {
-    SidenavList,
+    SidenavList
   },
   data() {
     return {
       logo,
-      logoDark,
+      logoDark
     };
   },
   computed: {
-    ...mapState(["isRTL", "sidebarType", "isDarkMode"]),
-  },
+    ...mapState(["isRTL", "sidebarType", "isDarkMode"])
+  }
 };
 </script>

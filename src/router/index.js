@@ -10,45 +10,45 @@ const routes = [
   {
     path: "/",
     name: "/",
-    redirect: "/dashboard",
+    redirect: "/dashboard"
   },
   {
     path: "/dashboard",
     name: "Dashboard",
-    component: Dashboard,
+    component: Dashboard
   },
   {
     path: "/tables",
     name: "Tables",
-    component: Tables,
+    component: Tables
   },
   {
     path: "/billing",
     name: "Billing",
-    component: Billing,
+    component: Billing
   },
   
   {
     path: "/profile",
     name: "Profile",
-    component: Profile,
+    component: Profile
   },
   {
     path: "/sign-in",
     name: "SignIn",
-    component: SignIn,
+    component: SignIn
   },
   {
     path: "/sign-up",
     name: "SignUp",
-    component: SignUp,
-  },
+    component: SignUp
+  }
 ];
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
-  linkActiveClass: "active",
+  linkActiveClass: "active"
 });
 
 export default router;

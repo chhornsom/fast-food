@@ -61,7 +61,7 @@ export default {
     PaymentCard,
     InvoiceCard,
     BillingCard,
-    TransactionCard,
-  },
+    TransactionCard
+  }
 };
 </script>

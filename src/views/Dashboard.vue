@@ -263,7 +263,7 @@ export default {
       logoSlack,
       logoSpotify,
       logoJira,
-      logoInvision,
+      logoInvision
     };
   },
   components: {
@@ -273,7 +273,7 @@ export default {
     MiniStatisticsCard,
     ProjectCard,
     TimelineList,
-    TimelineItem,
-  },
+    TimelineItem
+  }
 };
 </script>

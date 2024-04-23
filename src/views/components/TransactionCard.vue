@@ -170,7 +170,7 @@ import MaterialButton from "@/components/MaterialButton.vue";
 export default {
   name: "transaction-card",
   components: {
-    MaterialButton,
-  },
+    MaterialButton
+  }
 };
 </script>

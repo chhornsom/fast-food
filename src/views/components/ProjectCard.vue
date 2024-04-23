@@ -137,15 +137,15 @@ export default {
   props: {
     title: {
       type: String,
-      default: "",
+      default: ""
     },
     description: {
       type: String,
-      default: "",
+      default: ""
     },
     headers: {
       type: Array,
-      required: true,
+      required: true
     },
     projects: {
       type: Array,
@@ -157,9 +157,9 @@ export default {
       progress: {
         type: Object,
         percentage: Number,
-        color: String,
-      },
-    },
-  },
+        color: String
+      }
+    }
+  }
 };
 </script>

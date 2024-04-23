@@ -52,6 +52,6 @@ export default {
   name: "nav-pill",
   mounted() {
     setNavPills();
-  },
+  }
 };
 </script>

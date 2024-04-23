@@ -99,7 +99,7 @@ export default {
   data() {
     return {
       downArrWhite,
-      downArrBlack,
+      downArrBlack
     };
   },
   props: {
@@ -107,15 +107,15 @@ export default {
     isBlur: String,
     darkMode: {
       type: Boolean,
-      default: false,
-    },
+      default: false
+    }
   },
   computed: {
     darkModes() {
       return {
-        "text-dark": this.darkMode,
+        "text-dark": this.darkMode
       };
-    },
-  },
+    }
+  }
 };
 </script>

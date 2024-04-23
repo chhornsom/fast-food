@@ -126,7 +126,7 @@ export default {
     Navbar,
     MaterialInput,
     MaterialCheckbox,
-    MaterialButton,
+    MaterialButton
   },
   beforeMount() {
     this.toggleEveryDisplay();
@@ -139,7 +139,7 @@ export default {
     body.classList.add("bg-gray-100");
   },
   methods: {
-    ...mapMutations(["toggleEveryDisplay", "toggleHideConfig"]),
-  },
+    ...mapMutations(["toggleEveryDisplay", "toggleHideConfig"])
+  }
 };
 </script>

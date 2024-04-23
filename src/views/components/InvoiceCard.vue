@@ -110,7 +110,7 @@ import MaterialButton from "@/components/MaterialButton.vue";
 export default {
   name: "invoice-card",
   components: {
-    MaterialButton,
-  },
+    MaterialButton
+  }
 };
 </script>

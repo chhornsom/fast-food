@@ -154,7 +154,7 @@ export default {
     Navbar,
     MaterialInput,
     MaterialSwitch,
-    MaterialButton,
+    MaterialButton
   },
   beforeMount() {
     this.toggleEveryDisplay();
@@ -165,7 +165,7 @@ export default {
     this.toggleHideConfig();
   },
   methods: {
-    ...mapMutations(["toggleEveryDisplay", "toggleHideConfig"]),
-  },
+    ...mapMutations(["toggleEveryDisplay", "toggleHideConfig"])
+  }
 };
 </script>
