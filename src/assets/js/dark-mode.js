@@ -3,7 +3,7 @@
 export function activateDarkMode() {
   const body = document.getElementsByTagName("body")[0];
   const hr = document.querySelectorAll("div:not(.sidenav) > hr");
-  const hr_card = document.querySelectorAll("div:not(.bg-gradient-dark) hr");
+  const hr_card = document.querySelectorAll("div:not(.bg-gradient-white) hr");
   const text_btn = document.querySelectorAll("button:not(.btn) > .text-dark");
   const text_span = document.querySelectorAll(
     "span.text-dark, .breadcrumb .text-dark",

@@ -54,3 +54,11 @@ export default {
   }
 };
 </script>
+<style scoped>
+ .navbar {
+  background: gray;
+ }
+ span {
+  color: gray;
+ }
+</style>
