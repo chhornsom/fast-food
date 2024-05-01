@@ -22,7 +22,7 @@
           url="#"
           :aria-controls="''"
           v-bind:collapse="false"
-          collapseRef="food order"
+          collapseRef="food_order"
           navText="Food Order"
         >
           <template v-slot:icon>

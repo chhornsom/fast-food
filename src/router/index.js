@@ -1,7 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Dashboard from "../views/Dashboard.vue";
-import Tables from "../views/Tables.vue";
-import Billing from "../views/Billing.vue";
+import FoodOrder from "../views/FoodOrder.vue";
+import History from "../views/History.vue";
+import Setting from "../views/Setting.vue";
 import Profile from "../views/Profile.vue";
 import SignIn from "../views/SignIn.vue";
 import SignUp from "../views/SignUp.vue";
@@ -18,14 +19,19 @@ const routes = [
     component: Dashboard
   },
   {
-    path: "/tables",
-    name: "Tables",
-    component: Tables
+    path: "/food_order",
+    name: "FoodOrder",
+    component: FoodOrder
   },
   {
-    path: "/billing",
-    name: "Billing",
-    component: Billing
+    path: "/history",
+    name: "History",
+    component: History
+  },
+  {
+    path: "/setting",
+    name: "Setting",
+    component: Setting
   },
   
   {
