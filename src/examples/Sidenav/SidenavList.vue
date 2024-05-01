@@ -22,11 +22,11 @@
           url="#"
           :aria-controls="''"
           v-bind:collapse="false"
-          collapseRef="tables"
-          navText="Tables"
+          collapseRef="food order"
+          navText="Food Order"
         >
           <template v-slot:icon>
-            <i class="material-icons-round opacity-10 fs-5">table_view</i>
+            <i class="material-icons-round opacity-10 fs-5">motorcycle</i>
           </template>
         </sidenav-collapse>
       </li>
@@ -35,11 +35,24 @@
           url="#"
           :aria-controls="''"
           v-bind:collapse="false"
-          collapseRef="billing"
-          navText="Billing"
+          collapseRef="history"
+          navText="History"
         >
           <template v-slot:icon>
-            <i class="material-icons-round opacity-10 fs-5">receipt_long</i>
+            <i class="material-icons-round opacity-10 fs-5">history</i>
+          </template>
+        </sidenav-collapse>
+      </li>
+      <li class="nav-item">
+        <sidenav-collapse
+          url="#"
+          :aria-controls="''"
+          v-bind:collapse="false"
+          collapseRef="setting"
+          navText="Setting"
+        >
+          <template v-slot:icon>
+            <i class="material-icons-round opacity-10 fs-5">settings</i>
           </template>
         </sidenav-collapse>
       </li>

@@ -1,126 +1,131 @@
 <template>
-  <div class="py-4 container-fluid">
+  <div class="container-fluid">
+    <h3>Categories</h3>
     <div class="row mb-4">
       <div class="col-lg-12 position-relative z-index-2">
         <div class="row">
-          <div class="col-lg-3 col-md-6 col-sm-6">
-            <mini-statistics-card
-              :title="{ text: 'Today\'s Money', value: '$53k' }"
-              detail="<span class='text-success text-sm font-weight-bolder'>+55%</span> than last week"
-              :icon="{
-                name: 'weekend',
-                color: 'text-white',
-                background: 'dark',
-              }"
-            />
+          <div class="col s12 m6">
+            <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                <img
+                  src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Zm9vZHxlbnwwfHwwfHx8MA%3D%3D"
+                  alt="">
+                <h5 class="mt-2 text-center">All</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m6">
+            <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                <img
+                  src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Zm9vZHxlbnwwfHwwfHx8MA%3D%3D"
+                  alt="">
+                <h5 class="mt-2 text-center">All</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m6">
+            <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                <img
+                  src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Zm9vZHxlbnwwfHwwfHx8MA%3D%3D"
+                  alt="">
+                <h5 class="mt-2 text-center">All</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m6">
+            <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                <img
+                  src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Zm9vZHxlbnwwfHwwfHx8MA%3D%3D"
+                  alt="">
+                <h5 class="mt-2 text-center">All</h5>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="col-lg-3 col-md-6 col-sm-6 mt-lg-0 mt-">
+            <mini-statistics-card :title="{ text: 'Today\'s Users', value: '2,300' }"
+              detail="<span class='text-success text-sm font-weight-bolder'>+3%</span> than last month" :icon="{
+              name: 'leaderboard',
+              color: 'text-white',
+              background: 'primary',
+            }" />
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6 mt-lg-0 mt-4">
-            <mini-statistics-card
-              :title="{ text: 'Today\'s Users', value: '2,300' }"
-              detail="<span class='text-success text-sm font-weight-bolder'>+3%</span> than last month"
-              :icon="{
-                name: 'leaderboard',
-                color: 'text-white',
-                background: 'primary',
-              }"
-            />
+            <mini-statistics-card :title="{ text: 'New Clients', value: '3,462' }"
+              detail="<span class='text-danger text-sm font-weight-bolder'>-2%</span> than yesterday" :icon="{
+              name: 'person',
+              color: 'text-white',
+              background: 'success',
+            }" />
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6 mt-lg-0 mt-4">
-            <mini-statistics-card
-              :title="{ text: 'New Clients', value: '3,462' }"
-              detail="<span class='text-danger text-sm font-weight-bolder'>-2%</span> than yesterday"
-              :icon="{
-                name: 'person',
-                color: 'text-white',
-                background: 'success',
-              }"
-            />
-          </div>
-          <div class="col-lg-3 col-md-6 col-sm-6 mt-lg-0 mt-4">
-            <mini-statistics-card
-              :title="{ text: 'Sales', value: '$103,430' }"
-              detail="<span class='text-success text-sm font-weight-bolder'>+5%</span> Just updated"
-              :icon="{
-                name: 'weekend',
-                color: 'text-white',
-                background: 'info',
-              }"
-            />
+            <mini-statistics-card :title="{ text: 'Sales', value: '$103,430' }"
+              detail="<span class='text-success text-sm font-weight-bolder'>+5%</span> Just updated" :icon="{
+              name: 'weekend',
+              color: 'text-white',
+              background: 'info',
+            }" />
           </div>
         </div>
         <div class="row mt-4">
           <div class="col-lg-4 col-md-6 mt-4">
-            <chart-holder-card
-              title="Website Views"
-              subtitle="Last Campaign Performance"
-              update="campaign sent 2 days ago"
-            >
-              <reports-bar-chart
-                :chart="{
-                  labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
-                  datasets: {
-                    label: 'Sales',
-                    data: [50, 20, 10, 22, 50, 10, 40],
-                  },
-                }"
-              />
+            <chart-holder-card title="Website Views" subtitle="Last Campaign Performance"
+              update="campaign sent 2 days ago">
+              <reports-bar-chart :chart="{
+              labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
+              datasets: {
+                label: 'Sales',
+                data: [50, 20, 10, 22, 50, 10, 40],
+              },
+            }" />
             </chart-holder-card>
           </div>
           <div class="col-lg-4 col-md-6 mt-4">
-            <chart-holder-card
-              title="Daily Sales"
+            <chart-holder-card title="Daily Sales"
               subtitle="(<span class='font-weight-bolder'>+15%</span>) increase in today sales."
-              update="updated 4 min ago"
-              color="success"
-            >
-              <reports-line-chart
-                :chart="{
-                  labels: [
-                    'Apr',
-                    'May',
-                    'Jun',
-                    'Jul',
-                    'Aug',
-                    'Sep',
-                    'Oct',
-                    'Nov',
-                    'Dec',
-                  ],
-                  datasets: {
-                    label: 'Mobile apps',
-                    data: [50, 40, 300, 320, 500, 350, 200, 230, 500],
-                  },
-                }"
-              />
+              update="updated 4 min ago" color="success">
+              <reports-line-chart :chart="{
+              labels: [
+                'Apr',
+                'May',
+                'Jun',
+                'Jul',
+                'Aug',
+                'Sep',
+                'Oct',
+                'Nov',
+                'Dec',
+              ],
+              datasets: {
+                label: 'Mobile apps',
+                data: [50, 40, 300, 320, 500, 350, 200, 230, 500],
+              },
+            }" />
             </chart-holder-card>
           </div>
           <div class="col-lg-4 mt-4">
-            <chart-holder-card
-              title="Completed Tasks"
-              subtitle="Last Campaign Performance"
-              update="just updated"
-              color="dark"
-            >
-              <reports-line-chart
-                id="tasks-chart"
-                :chart="{
-                  labels: [
-                    'Apr',
-                    'May',
-                    'Jun',
-                    'Jul',
-                    'Aug',
-                    'Sep',
-                    'Oct',
-                    'Nov',
-                    'Dec',
-                  ],
-                  datasets: {
-                    label: 'Mobile apps',
-                    data: [50, 40, 300, 220, 500, 250, 400, 230, 500],
-                  },
-                }"
-              />
+            <chart-holder-card title="Completed Tasks" subtitle="Last Campaign Performance" update="just updated"
+              color="dark">
+              <reports-line-chart id="tasks-chart" :chart="{
+              labels: [
+                'Apr',
+                'May',
+                'Jun',
+                'Jul',
+                'Aug',
+                'Sep',
+                'Oct',
+                'Nov',
+                'Dec',
+              ],
+              datasets: {
+                label: 'Mobile apps',
+                data: [50, 40, 300, 220, 500, 250, 400, 230, 500],
+              },
+            }" />
             </chart-holder-card>
           </div>
         </div>
@@ -129,104 +134,76 @@
 
     <div class="row">
       <div class="col-lg-8 col-md-6 mb-md-0 mb-4">
-        <project-card
-          title="Projects"
+        <project-card title="Projects"
           description="<i class='fa fa-check text-info' aria-hidden='true'></i> <span class='font-weight-bold ms-1'>30 done</span> this month"
-          :headers="['Companies', 'Members', 'Budget', 'Progress']"
-          :projects="[
-            {
-              logo: logoXD,
-              title: 'Material XD Material XD Version',
-              members: [team1, team2, team3, team4],
-              budget: '$14,000',
-              progress: { percentage: 60, color: 'info' },
-            },
-            {
-              logo: logoAtlassian,
-              title: 'Add Progress Track',
-              members: [team2, team4],
-              budget: '$3,000',
-              progress: { percentage: 10, color: 'info' },
-            },
-            {
-              logo: logoSlack,
-              title: 'Fix Platform Errors',
-              members: [team3, team1],
-              budget: 'Not set',
-              progress: { percentage: 100, color: 'success' },
-            },
-            {
-              logo: logoSpotify,
-              title: 'Launch our Mobile App',
-              members: [team4, team3, team4, team1],
-              budget: '$20,500',
-              progress: { percentage: 100, color: 'success' },
-            },
-            {
-              logo: logoJira,
-              title: 'Add the New Pricing Page',
-              members: [team4],
-              budget: '$500',
-              progress: { percentage: 25, color: 'info' },
-            },
-            {
-              logo: logoJira,
-              title: 'Redesign New Online Shop',
-              members: [team1, team4],
-              budget: '$2,000',
-              progress: { percentage: 40, color: 'info' },
-            },
-          ]"
-        />
+          :headers="['Companies', 'Members', 'Budget', 'Progress']" :projects="[
+              {
+                logo: logoXD,
+                title: 'Material XD Material XD Version',
+                members: [team1, team2, team3, team4],
+                budget: '$14,000',
+                progress: { percentage: 60, color: 'info' },
+              },
+              {
+                logo: logoAtlassian,
+                title: 'Add Progress Track',
+                members: [team2, team4],
+                budget: '$3,000',
+                progress: { percentage: 10, color: 'info' },
+              },
+              {
+                logo: logoSlack,
+                title: 'Fix Platform Errors',
+                members: [team3, team1],
+                budget: 'Not set',
+                progress: { percentage: 100, color: 'success' },
+              },
+              {
+                logo: logoSpotify,
+                title: 'Launch our Mobile App',
+                members: [team4, team3, team4, team1],
+                budget: '$20,500',
+                progress: { percentage: 100, color: 'success' },
+              },
+              {
+                logo: logoJira,
+                title: 'Add the New Pricing Page',
+                members: [team4],
+                budget: '$500',
+                progress: { percentage: 25, color: 'info' },
+              },
+              {
+                logo: logoJira,
+                title: 'Redesign New Online Shop',
+                members: [team1, team4],
+                budget: '$2,000',
+                progress: { percentage: 40, color: 'info' },
+              },
+            ]" />
       </div>
       <div class="col-lg-4 col-md-6">
-        <timeline-list
-          class="h-100"
-          title="Orders overview"
-          description="<i class='fa fa-arrow-up text-success' aria-hidden='true'></i>
-        <span class='font-weight-bold'>24%</span> this month"
-        >
-          <timeline-item
-            :icon="{
+        <timeline-list class="h-100" title="Orders overview" description="<i class='fa fa-arrow-up text-success' aria-hidden='true'></i>
+        <span class='font-weight-bold'>24%</span> this month">
+          <timeline-item :icon="{
               component: 'notifications',
               class: 'text-success',
-            }"
-            title="$2400 Design changes"
-            date-time="22 DEC 7:20 PM"
-          />
-          <TimelineItem
-            :icon="{
+            }" title="$2400 Design changes" date-time="22 DEC 7:20 PM" />
+          <TimelineItem :icon="{
               component: 'code',
               class: 'text-danger',
-            }"
-            title="New order #1832412"
-            date-time="21 DEC 11 PM"
-          />
-          <TimelineItem
-            :icon="{
+            }" title="New order #1832412" date-time="21 DEC 11 PM" />
+          <TimelineItem :icon="{
               component: 'shopping_cart',
               class: 'text-info',
-            }"
-            title="Server payments for April"
-            date-time="21 DEC 9:34 PM"
-          />
-          <TimelineItem
-            :icon="{
+            }" title="Server payments for April" date-time="21 DEC 9:34 PM" />
+          <TimelineItem :icon="{
               component: 'credit_card',
               class: 'text-warning',
-            }"
-            title="New card added for order #4395133"
-            date-time="20 DEC 2:20 AM"
-          />
-          <TimelineItem
-            :icon="{
+            }" title="New card added for order #4395133" date-time="20 DEC 2:20 AM" />
+          <TimelineItem :icon="{
               component: 'vpn_key',
               class: 'text-primary',
-            }"
-            title="Unlock packages for development"
-            date-time="18 DEC 4:54 AM"
-            class="pb-1"
-          />
+            }" title="Unlock packages for development" date-time="18 DEC 4:54 AM" class="pb-1" />
         </timeline-list>
       </div>
     </div>
@@ -277,3 +254,9 @@ export default {
   }
 };
 </script>
+<style lang="scss" scoped>
+img {
+  width: 100%;
+  height: 100%;
+}
+</style>

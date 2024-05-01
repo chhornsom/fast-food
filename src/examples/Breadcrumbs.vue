@@ -19,7 +19,7 @@
       </li>
     </ol>
     <h6 class="mb-0 font-weight-bolder" :class="color">
-      {{ currentPage }}
+     Menu
     </h6>
   </nav>
 </template>
