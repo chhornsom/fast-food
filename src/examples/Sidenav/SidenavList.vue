@@ -56,15 +56,15 @@
           </template>
         </sidenav-collapse>
       </li>
-      <li class="mt-3 nav-item">
+      <!-- <li class="mt-3 nav-item">
         <h6
           class="text-xs ps-4 text-uppercase font-weight-bolder text-white"
           :class="$store.state.isRTL ? 'me-4' : 'ms-2'"
         >
           ACCOUNT PAGES
         </h6>
-      </li>
-      <li class="nav-item">
+      </li> -->
+      <!-- <li class="nav-item">
         <sidenav-collapse
           url="#"
           :aria-controls="''"
@@ -76,8 +76,8 @@
             <i class="material-icons-round opacity-10 fs-5">person</i>
           </template>
         </sidenav-collapse>
-      </li>
-      <li class="nav-item">
+      </li> -->
+      <!-- <li class="nav-item">
         <sidenav-collapse
           url="#"
           :aria-controls="''"
@@ -89,8 +89,8 @@
             <i class="material-icons-round opacity-10 fs-5">login</i>
           </template>
         </sidenav-collapse>
-      </li>
-      <li class="nav-item">
+      </li> -->
+      <!-- <li class="nav-item">
         <sidenav-collapse
           url="#"
           :aria-controls="''"
@@ -102,7 +102,7 @@
             <i class="material-icons-round opacity-10 fs-5">assignment</i>
           </template>
         </sidenav-collapse>
-      </li>
+      </li> -->
     </ul>
   </div>
 </template>

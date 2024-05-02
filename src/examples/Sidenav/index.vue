@@ -14,12 +14,7 @@
       ></i>
       <a class="m-0 navbar-brand" href="/">
         <img
-          :src="
-            sidebarType === 'bg-white' ||
-            (sidebarType === 'bg-transparent' && !isDarkMode)
-              ? logoDark
-              : logo
-          "
+          :src="logo"
           class="navbar-brand-img h-100"
           alt="main_logo"
         />
@@ -34,7 +29,7 @@
 </template>
 <script>
 import SidenavList from "./SidenavList.vue";
-import logo from "@/assets/img/logo-ct.png";
+import logo from "@/assets/img/ff-chicken.png";
 import logoDark from "@/assets/img/logo-ct-dark.png";
 import { mapState } from "vuex";
 
