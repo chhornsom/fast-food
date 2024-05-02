@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid mt-4">
+  <div class="container-fluid">
     <div class="row align-items-center">
       <div class="col-lg-4 col-sm-8">
         <nav-pill />
@@ -28,7 +28,8 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-4">
+      <div class="col-lg-12">
+        <h3>Orders History</h3>
         <invoice-card />
       </div>
     </div>
@@ -44,24 +45,11 @@
 </template>
 
 <script>
-import NavPill from "./components/NavPill.vue";
-import MasterCard from "@/examples/Cards/MasterCard.vue";
-import DefaultInfoCard from "@/examples/Cards/DefaultInfoCard.vue";
-import PaymentCard from "./components/PaymentCard.vue";
 import InvoiceCard from "./components/InvoiceCard.vue";
-import BillingCard from "./components/BillingCard.vue";
-import TransactionCard from "./components/TransactionCard.vue";
-
 export default {
   name: "Billing",
   components: {
-    NavPill,
-    MasterCard,
-    DefaultInfoCard,
-    PaymentCard,
-    InvoiceCard,
-    BillingCard,
-    TransactionCard
+    InvoiceCard
   }
 };
 </script>
