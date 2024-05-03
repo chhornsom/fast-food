@@ -9,7 +9,7 @@
     <div class="shadow-lg card">
       <div class="pt-3 pb-0 bg-transparent card-header">
         <div class="float-start">
-          <h5 class="mt-3 mb-0">Material UI Configurator</h5>
+          <h5 class="mt-3 mb-0">Screen Action</h5>
           <p>See our dashboard options.</p>
         </div>
         <div class="mt-4 float-end" @click="toggle">
@@ -30,42 +30,41 @@
             class="my-2 badge-colors"
             :class="isRTL ? 'text-end' : ' text-start'"
           >
-            <span
+            <!-- <span
               class="badge filter bg-gradient-primary"
               data-color="primary"
               @click="sidebarColor('primary')"
-            ></span>
+            ></span> -->
             <span
               class="badge filter bg-gradient-dark"
               data-color="dark"
               @click="sidebarColor('dark')"
             ></span>
-            <span
+            <!-- <span
               class="badge filter bg-gradient-info"
               data-color="info"
               @click="sidebarColor('info')"
-            ></span>
-            <span
+            ></span> -->
+            <!-- <span
               class="badge filter bg-gradient-success"
               data-color="success"
               @click="sidebarColor('success')"
-            ></span>
+            ></span> -->
             <span
               class="badge filter bg-gradient-warning"
               data-color="warning"
               @click="sidebarColor('warning')"
             ></span>
-            <span
+            <!-- <span
               class="badge filter bg-gradient-danger"
               data-color="danger"
               @click="sidebarColor('danger')"
-            ></span>
+            ></span> -->
           </div>
         </a>
         <!-- Sidenav Type -->
         <div class="mt-3">
           <h6 class="mb-0">Sidenav Type</h6>
-          <p class="text-sm">Choose between 2 different sidenav types.</p>
         </div>
         <div class="d-flex">
           <button
@@ -76,14 +75,14 @@
           >
             Dark
           </button>
-          <button
+          <!-- <button
             id="btn-transparent"
             class="px-3 mb-2 btn bg-gradient-dark ms-2"
             :class="sidebarType === 'bg-transparent' ? 'active' : ''"
             @click="sidebar('bg-transparent')"
           >
             Transparent
-          </button>
+          </button> -->
           <button
             id="btn-white"
             class="px-3 mb-2 btn bg-gradient-dark ms-2"
@@ -93,9 +92,9 @@
             White
           </button>
         </div>
-        <p class="text-sm d-xl-none d-block mt-2">
+        <!-- <p class="text-sm d-xl-none d-block mt-2">
           You can change the sidenav type just on desktop view.
-        </p>
+        </p> -->
 
         <!-- Navbar Fixed -->
         <hr class="horizontal dark my-3" />
@@ -111,29 +110,6 @@
           </div>
         </div>
         <hr class="horizontal dark my-sm-4" />
-
-        <a
-          class="btn btn-outline-dark w-100"
-          href="https://www.creative-tim.com/learning-lab/vue/overview/material-dashboard/"
-          >View documentation</a
-        >
-        <div class="text-center w-100">
-          <h6 class="mt-3">Thank you for sharing!</h6>
-          <a
-            href="https://twitter.com/intent/tweet?text=Check%20Vue%20Material%20Dashboard%202%20made%20by%20%40CreativeTim%20%23webdesign%20%23dashboard%20%23vuejs3&amp;url=https%3A%2F%2Fwww.creative-tim.com%2Fproduct%2Fvue-material-dashboard-2"
-            class="mb-0 btn btn-dark me-2"
-            target="_blank"
-          >
-            <i class="fab fa-twitter me-1" aria-hidden="true"></i> Tweet
-          </a>
-          <a
-            href="https://www.facebook.com/sharer/sharer.php?u=https://www.creative-tim.com/product/vue-material-dashboard-2"
-            class="mb-0 btn btn-dark me-2"
-            target="_blank"
-          >
-            <i class="fab fa-facebook-square me-1" aria-hidden="true"></i> Share
-          </a>
-        </div>
       </div>
     </div>
   </div>
@@ -186,7 +162,7 @@ export default {
         transparent.classList.add("disabled");
         white.classList.add("disabled");
       } else {
-        transparent.classList.remove("disabled");
+        transparent?.classList.remove("disabled");
         white.classList.remove("disabled");
       }
     }
