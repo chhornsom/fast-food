@@ -6,9 +6,9 @@
       </div>
       <div class="col-6 text-end">
         <material-button color="warning" variant="gradient">
-        <i class="fas fa-plus me-2"></i>
-        Add New Item
-      </material-button>
+          <i class="fas fa-plus me-2"></i>
+          Add New Item
+        </material-button>
       </div>
     </div>
     <div class="row mb-4">
@@ -55,90 +55,7 @@
             </div>
           </div>
           <br>
-          <!-- <div class="col-lg-3 col-md-6 col-sm-6 mt-lg-0 mt-">
-            <mini-statistics-card :title="{ text: 'Today\'s Users', value: '2,300' }"
-              detail="<span class='text-success text-sm font-weight-bolder'>+3%</span> than last month" :icon="{
-                name: 'leaderboard',
-                color: 'text-white',
-                background: 'primary',
-              }" />
-          </div> -->
-          <!-- <div class="col-lg-3 col-md-6 col-sm-6 mt-lg-0 mt-4">
-            <mini-statistics-card :title="{ text: 'New Clients', value: '3,462' }"
-              detail="<span class='text-danger text-sm font-weight-bolder'>-2%</span> than yesterday" :icon="{
-                name: 'person',
-                color: 'text-white',
-                background: 'success',
-              }" />
-          </div> -->
-          <!-- <div class="col-lg-3 col-md-6 col-sm-6 mt-lg-0 mt-4">
-            <mini-statistics-card :title="{ text: 'Sales', value: '$103,430' }"
-              detail="<span class='text-success text-sm font-weight-bolder'>+5%</span> Just updated" :icon="{
-                name: 'weekend',
-                color: 'text-white',
-                background: 'info',
-              }" />
-          </div> -->
         </div>
-        <!-- <div class="row mt-4">
-          <div class="col-lg-4 col-md-6 mt-4">
-            <chart-holder-card title="Website Views" subtitle="Last Campaign Performance"
-              update="campaign sent 2 days ago">
-              <reports-bar-chart :chart="{
-                labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
-                datasets: {
-                  label: 'Sales',
-                  data: [50, 20, 10, 22, 50, 10, 40],
-                },
-              }" />
-            </chart-holder-card>
-          </div>
-          <div class="col-lg-4 col-md-6 mt-4">
-            <chart-holder-card title="Daily Sales"
-              subtitle="(<span class='font-weight-bolder'>+15%</span>) increase in today sales."
-              update="updated 4 min ago" color="success">
-              <reports-line-chart :chart="{
-                labels: [
-                  'Apr',
-                  'May',
-                  'Jun',
-                  'Jul',
-                  'Aug',
-                  'Sep',
-                  'Oct',
-                  'Nov',
-                  'Dec',
-                ],
-                datasets: {
-                  label: 'Mobile apps',
-                  data: [50, 40, 300, 320, 500, 350, 200, 230, 500],
-                },
-              }" />
-            </chart-holder-card>
-          </div>
-          <div class="col-lg-4 mt-4">
-            <chart-holder-card title="Completed Tasks" subtitle="Last Campaign Performance" update="just updated"
-              color="dark">
-              <reports-line-chart id="tasks-chart" :chart="{
-                labels: [
-                  'Apr',
-                  'May',
-                  'Jun',
-                  'Jul',
-                  'Aug',
-                  'Sep',
-                  'Oct',
-                  'Nov',
-                  'Dec',
-                ],
-                datasets: {
-                  label: 'Mobile apps',
-                  data: [50, 40, 300, 220, 500, 250, 400, 230, 500],
-                },
-              }" />
-            </chart-holder-card>
-          </div>
-        </div> -->
       </div>
     </div>
 
@@ -220,10 +137,7 @@
   </div>
 </template>
 <script>
-// import ChartHolderCard from "./components/ChartHolderCard.vue";
-// import ReportsBarChart from "@/examples/Charts/ReportsBarChart.vue";
-// import ReportsLineChart from "@/examples/Charts/ReportsLineChart.vue";
-// import MiniStatisticsCard from "./components/MiniStatisticsCard.vue";
+
 import ProjectCard from "./components/ProjectCard.vue";
 import TimelineList from "@/examples/Cards/TimelineList.vue";
 import TimelineItem from "@/examples/Cards/TimelineItem.vue";
@@ -251,20 +165,96 @@ export default {
       logoSlack,
       logoSpotify,
       logoJira,
-      logoInvision
+      logoInvision,
+      posts: [],
+      newPost: {
+        name: "",
+        price: "",
+        product_image: "",
+        create_at: ""
+      },
+      editingPost: null
     };
   },
+  created() {
+    this.fetchFastFoodItems();
+  },
+  methods: {
+    fetchFastFoodItems() {
+      fetch("https://jsonplaceholder.typicode.com/posts")
+        .then(response => response.json())
+        .then(posts => {
+          this.posts = posts;
+        });
+    },
+    addNewItem() {
+      fetch("https://jsonplaceholder.typicode.com/posts", {
+        method: "POST",
+        body: JSON.stringify(this.newPost),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8"
+        }
+      })
+        .then(response => response.json())
+        .then(post => {
+          this.posts.unshift(post);
+          this.newPost.name = "";
+          this.newPost.title = "";
+          this.newPost.product_image = "";
+          this.newPost.create_at = ""
+        });
+    },
+    editItem(post) {
+      this.editingPost = post;
+      this.newPost.name = post.name;
+      this.newPost.price = post.price;
+      this.newPost.product_image = post.product_image;
+      this.newPost.create_at = post.create_at
+    },
+    updateItem() {
+      fetch(`https://jsonplaceholder.typicode.com/posts/${this.editingPost.id}`, {
+        method: "PUT",
+        body: JSON.stringify({
+          name: this.newPost.name,
+          price: this.newPost.price,
+          product_image: this.newPost.product_image,
+          create_at: this.newPost.create_at,
+          // userId: this.editingPost.userId,
+          id: this.editingPost.id
+        }),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8"
+        }
+      })
+        .then(response => response.json())
+        .then(updatedPost => {
+          const index = this.posts.findIndex(post => post.id === updatedPost.id);
+          if (index !== -1) {
+            this.posts.splice(index, 1, updatedPost);
+          }
+          this.newPost.name = "";
+          this.newPost.price = "";
+          this.newPost.product_image = "";
+          this.newPost.create_at = "";
+          this.editingPost = null;
+        });
+    },
+    deleteItem(id) {
+      fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
+        method: "DELETE"
+      })
+        .then(() => {
+          this.posts = this.posts.filter(post => post.id !== id);
+        });
+    }
+  },
   components: {
-    // ChartHolderCard,
-    // ReportsBarChart,
-    // ReportsLineChart,
-    // MiniStatisticsCard,
     ProjectCard,
     TimelineList,
     TimelineItem,
     MaterialButton
   }
-};
+}
 </script>
 <style lang="scss" scoped>
 img {
