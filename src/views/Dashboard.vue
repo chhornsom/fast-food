@@ -11,133 +11,237 @@
         </material-button>
       </div>
     </div>
-    <div class="row mb-4">
-      <div class="col-lg-12 position-relative z-index-2">
-        <div class="row">
-          <div class="col s12 m6">
-            <div class="card" style="width: 18rem;">
-              <div class="card-body">
-                <img
-                  src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Zm9vZHxlbnwwfHwwfHx8MA%3D%3D"
-                  alt="">
-                <h5 class="mt-2 text-center">All</h5>
+    <section>
+      <div class="row">
+        <div class="col-sm-6 col-md-6 col-lg-6">
+          <div class="food-card food-card--vertical">
+            <div class="food-card_img">
+              <img src="https://i.imgur.com/eFWRUuR.jpg" alt="" />
+              <a href="#!"><i class="fa fa-heart"></i></a>
+            </div>
+            <div class="food-card_content">
+              <div class="food-card_title-section">
+                <a href="#!" class="food-card_title"
+                  >Double Cheese Potato Burger</a
+                >
+                <a href="#!" class="food-card_author">Burger</a>
+              </div>
+              <div class="food-card_bottom-section">
+                <div class="space-between">
+                  <div><span class="fa fa-fire"></span> 220 - 280 Kcal</div>
+                  <div class="pull-right">
+                    <span class="badge badge-success">Veg</span>
+                  </div>
+                </div>
+                <hr />
+                <div class="space-between">
+                  <div class="food-card_price">
+                    <span>5.99$</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div class="col s12 m6">
-            <div class="card" style="width: 18rem;">
-              <div class="card-body">
-                <img
-                  src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Zm9vZHxlbnwwfHwwfHx8MA%3D%3D"
-                  alt="">
-                <h5 class="mt-2 text-center">All</h5>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6">
+          <div class="food-card food-card--vertical">
+            <div class="food-card_img">
+              <img src="https://i.imgur.com/eFWRUuR.jpg" alt="" />
+              <a href="#!"><i class="fa fa-heart"></i></a>
+            </div>
+            <div class="food-card_content">
+              <div class="food-card_title-section">
+                <a href="#!" class="food-card_title"
+                  >Double Cheese Potato Burger</a
+                >
+                <a href="#!" class="food-card_author">Burger</a>
+              </div>
+              <div class="food-card_bottom-section">
+                <div class="space-between">
+                  <div><span class="fa fa-fire"></span> 220 - 280 Kcal</div>
+                  <div class="pull-right">
+                    <span class="badge badge-success">Veg</span>
+                  </div>
+                </div>
+                <hr />
+                <div class="space-between">
+                  <div class="food-card_price">
+                    <span>5.99$</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div class="col s12 m6">
-            <div class="card" style="width: 18rem;">
-              <div class="card-body">
-                <img
-                  src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Zm9vZHxlbnwwfHwwfHx8MA%3D%3D"
-                  alt="">
-                <h5 class="mt-2 text-center">All</h5>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6">
+          <div class="food-card food-card--vertical">
+            <div class="food-card_img">
+              <img src="https://i.imgur.com/eFWRUuR.jpg" alt="" />
+              <a href="#!"><i class="fa fa-heart"></i></a>
+            </div>
+            <div class="food-card_content">
+              <div class="food-card_title-section">
+                <a href="#!" class="food-card_title"
+                  >Double Cheese Potato Burger</a
+                >
+                <a href="#!" class="food-card_author">Burger</a>
+              </div>
+              <div class="food-card_bottom-section">
+                <div class="space-between">
+                  <div><span class="fa fa-fire"></span> 220 - 280 Kcal</div>
+                  <div class="pull-right">
+                    <span class="badge badge-success">Veg</span>
+                  </div>
+                </div>
+                <hr />
+                <div class="space-between">
+                  <div class="food-card_price">
+                    <span>5.99$</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div class="col s12 m6">
-            <div class="card" style="width: 18rem;">
-              <div class="card-body">
-                <img
-                  src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Zm9vZHxlbnwwfHwwfHx8MA%3D%3D"
-                  alt="">
-                <h5 class="mt-2 text-center">All</h5>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6">
+          <div class="food-card food-card--vertical">
+            <div class="food-card_img">
+              <img src="https://i.imgur.com/eFWRUuR.jpg" alt="" />
+              <a href="#!"><i class="fa fa-heart"></i></a>
+            </div>
+            <div class="food-card_content">
+              <div class="food-card_title-section">
+                <a href="#!" class="food-card_title"
+                  >Double Cheese Potato Burger</a
+                >
+                <a href="#!" class="food-card_author">Burger</a>
+              </div>
+              <div class="food-card_bottom-section">
+                <div class="space-between">
+                  <div><span class="fa fa-fire"></span> 220 - 280 Kcal</div>
+                  <div class="pull-right">
+                    <span class="badge badge-success">Veg</span>
+                  </div>
+                </div>
+                <hr />
+                <div class="space-between">
+                  <div class="food-card_price">
+                    <span>5.99$</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <br>
         </div>
       </div>
-    </div>
+    </section>
 
     <div class="row">
       <div class="col-lg-8 col-md-6 mb-md-0 mb-4">
-        <project-card title="Projects"
+        <project-card
+          title="Projects"
           description="<i class='fa fa-check text-info' aria-hidden='true'></i> <span class='font-weight-bold ms-1'>30 done</span> this month"
-          :headers="['Companies', 'Members', 'Budget', 'Progress']" :projects="[
+          :headers="['Companies', 'Members', 'Budget', 'Progress']"
+          :projects="[
             {
               logo: logoXD,
               title: 'Material XD Material XD Version',
               members: [team1, team2, team3, team4],
               budget: '$14,000',
-              progress: { percentage: 60, color: 'info' },
+              progress: { percentage: 60, color: 'info' }
             },
             {
               logo: logoAtlassian,
               title: 'Add Progress Track',
               members: [team2, team4],
               budget: '$3,000',
-              progress: { percentage: 10, color: 'info' },
+              progress: { percentage: 10, color: 'info' }
             },
             {
               logo: logoSlack,
               title: 'Fix Platform Errors',
               members: [team3, team1],
               budget: 'Not set',
-              progress: { percentage: 100, color: 'success' },
+              progress: { percentage: 100, color: 'success' }
             },
             {
               logo: logoSpotify,
               title: 'Launch our Mobile App',
               members: [team4, team3, team4, team1],
               budget: '$20,500',
-              progress: { percentage: 100, color: 'success' },
+              progress: { percentage: 100, color: 'success' }
             },
             {
               logo: logoJira,
               title: 'Add the New Pricing Page',
               members: [team4],
               budget: '$500',
-              progress: { percentage: 25, color: 'info' },
+              progress: { percentage: 25, color: 'info' }
             },
             {
               logo: logoJira,
               title: 'Redesign New Online Shop',
               members: [team1, team4],
               budget: '$2,000',
-              progress: { percentage: 40, color: 'info' },
-            },
-          ]" />
+              progress: { percentage: 40, color: 'info' }
+            }
+          ]"
+        />
       </div>
       <div class="col-lg-4 col-md-6">
-        <timeline-list class="h-100" title="Orders overview" description="<i class='fa fa-arrow-up text-success' aria-hidden='true'></i>
-        <span class='font-weight-bold'>24%</span> this month">
-          <timeline-item :icon="{
-            component: 'notifications',
-            class: 'text-success',
-          }" title="$2400 Design changes" date-time="22 DEC 7:20 PM" />
-          <TimelineItem :icon="{
-            component: 'code',
-            class: 'text-danger',
-          }" title="New order #1832412" date-time="21 DEC 11 PM" />
-          <TimelineItem :icon="{
-            component: 'shopping_cart',
-            class: 'text-info',
-          }" title="Server payments for April" date-time="21 DEC 9:34 PM" />
-          <TimelineItem :icon="{
-            component: 'credit_card',
-            class: 'text-warning',
-          }" title="New card added for order #4395133" date-time="20 DEC 2:20 AM" />
-          <TimelineItem :icon="{
-            component: 'vpn_key',
-            class: 'text-primary',
-          }" title="Unlock packages for development" date-time="18 DEC 4:54 AM" class="pb-1" />
+        <timeline-list
+          class="h-100"
+          title="Orders overview"
+          description="<i class='fa fa-arrow-up text-success' aria-hidden='true'></i>
+        <span class='font-weight-bold'>24%</span> this month"
+        >
+          <timeline-item
+            :icon="{
+              component: 'notifications',
+              class: 'text-success'
+            }"
+            title="$2400 Design changes"
+            date-time="22 DEC 7:20 PM"
+          />
+          <TimelineItem
+            :icon="{
+              component: 'code',
+              class: 'text-danger'
+            }"
+            title="New order #1832412"
+            date-time="21 DEC 11 PM"
+          />
+          <TimelineItem
+            :icon="{
+              component: 'shopping_cart',
+              class: 'text-info'
+            }"
+            title="Server payments for April"
+            date-time="21 DEC 9:34 PM"
+          />
+          <TimelineItem
+            :icon="{
+              component: 'credit_card',
+              class: 'text-warning'
+            }"
+            title="New card added for order #4395133"
+            date-time="20 DEC 2:20 AM"
+          />
+          <TimelineItem
+            :icon="{
+              component: 'vpn_key',
+              class: 'text-primary'
+            }"
+            title="Unlock packages for development"
+            date-time="18 DEC 4:54 AM"
+            class="pb-1"
+          />
         </timeline-list>
       </div>
     </div>
   </div>
 </template>
 <script>
-
 import ProjectCard from "./components/ProjectCard.vue";
 import TimelineList from "@/examples/Cards/TimelineList.vue";
 import TimelineItem from "@/examples/Cards/TimelineItem.vue";
@@ -182,8 +286,8 @@ export default {
   methods: {
     fetchFastFoodItems() {
       fetch("https://jsonplaceholder.typicode.com/posts")
-        .then(response => response.json())
-        .then(posts => {
+        .then((response) => response.json())
+        .then((posts) => {
           this.posts = posts;
         });
     },
@@ -195,13 +299,13 @@ export default {
           "Content-type": "application/json; charset=UTF-8"
         }
       })
-        .then(response => response.json())
-        .then(post => {
+        .then((response) => response.json())
+        .then((post) => {
           this.posts.unshift(post);
           this.newPost.name = "";
           this.newPost.title = "";
           this.newPost.product_image = "";
-          this.newPost.create_at = ""
+          this.newPost.create_at = "";
         });
     },
     editItem(post) {
@@ -209,26 +313,31 @@ export default {
       this.newPost.name = post.name;
       this.newPost.price = post.price;
       this.newPost.product_image = post.product_image;
-      this.newPost.create_at = post.create_at
+      this.newPost.create_at = post.create_at;
     },
     updateItem() {
-      fetch(`https://jsonplaceholder.typicode.com/posts/${this.editingPost.id}`, {
-        method: "PUT",
-        body: JSON.stringify({
-          name: this.newPost.name,
-          price: this.newPost.price,
-          product_image: this.newPost.product_image,
-          create_at: this.newPost.create_at,
-          // userId: this.editingPost.userId,
-          id: this.editingPost.id
-        }),
-        headers: {
-          "Content-type": "application/json; charset=UTF-8"
+      fetch(
+        `https://jsonplaceholder.typicode.com/posts/${this.editingPost.id}`,
+        {
+          method: "PUT",
+          body: JSON.stringify({
+            name: this.newPost.name,
+            price: this.newPost.price,
+            product_image: this.newPost.product_image,
+            create_at: this.newPost.create_at,
+            // userId: this.editingPost.userId,
+            id: this.editingPost.id
+          }),
+          headers: {
+            "Content-type": "application/json; charset=UTF-8"
+          }
         }
-      })
-        .then(response => response.json())
-        .then(updatedPost => {
-          const index = this.posts.findIndex(post => post.id === updatedPost.id);
+      )
+        .then((response) => response.json())
+        .then((updatedPost) => {
+          const index = this.posts.findIndex(
+            (post) => post.id === updatedPost.id
+          );
           if (index !== -1) {
             this.posts.splice(index, 1, updatedPost);
           }
@@ -242,10 +351,9 @@ export default {
     deleteItem(id) {
       fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
         method: "DELETE"
-      })
-        .then(() => {
-          this.posts = this.posts.filter(post => post.id !== id);
-        });
+      }).then(() => {
+        this.posts = this.posts.filter((post) => post.id !== id);
+      });
     }
   },
   components: {
@@ -254,11 +362,209 @@ export default {
     TimelineItem,
     MaterialButton
   }
-}
+};
 </script>
 <style lang="scss" scoped>
 img {
   width: 100%;
   height: 100%;
+}
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap);
+
+body {
+  background: #f9f9f9;
+  font-family: 'roboto', sans-serif;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap);
+
+body {
+  background: #f9f9f9;
+  font-family: 'roboto', sans-serif;
+}
+
+.main-content {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.food-card {
+  background: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+.food-card:hover {
+  -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.food-card .food-card_img {
+  display: block;
+  position: relative;
+}
+
+.food-card .food-card_img img {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.food-card .food-card_img i {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #fff;
+  font-size: 25px;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+}
+
+.food-card .food-card_img i:hover {
+  top: 18px;
+  right: 28px;
+  font-size: 29px;
+}
+
+.food-card .food-card_content {
+  padding: 15px;
+}
+
+.food-card .food-card_content .food-card_title-section {
+  height: 100px;
+  overflow: hidden;
+}
+
+.food-card .food-card_content .food-card_title-section .food-card_title {
+  font-size: 24px;
+  color: #333;
+  font-weight: 500;
+  display: block;
+  line-height: 1.3;
+  margin-bottom: 8px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.food-card .food-card_content .food-card_title-section .food-card_author {
+  font-size: 15px;
+  display: block;
+}
+
+.food-card .food-card_content .food-card_bottom-section .space-between {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.food-card .food-card_content .food-card_bottom-section .food-card_subscribers {
+  margin-left: 17px;
+}
+
+.food-card
+  .food-card_content
+  .food-card_bottom-section
+  .food-card_subscribers
+  img,
+.food-card
+  .food-card_content
+  .food-card_bottom-section
+  .food-card_subscribers
+  .food-card_subscribers-count {
+  height: 45px;
+  width: 45px;
+  border-radius: 45px;
+  border: 3px solid #fff;
+  margin-left: -17px;
+  float: left;
+  background: #f5f5f5;
+}
+
+.food-card
+  .food-card_content
+  .food-card_bottom-section
+  .food-card_subscribers
+  .food-card_subscribers-count {
+  position: relative;
+}
+
+.food-card
+  .food-card_content
+  .food-card_bottom-section
+  .food-card_subscribers
+  .food-card_subscribers-count
+  span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: 13px;
+}
+
+.food-card .food-card_content .food-card_bottom-section .food-card_price {
+  font-size: 28px;
+  font-weight: 500;
+  color: #f47a00;
+}
+
+.food-card .food-card_content .food-card_bottom-section .food-card_order-count {
+  width: 180px;
+}
+
+.food-card
+  .food-card_content
+  .food-card_bottom-section
+  .food-card_order-count
+  input {
+  background: #f5f5f5;
+  border-color: #f5f5f5;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  text-align: center;
+}
+
+.food-card
+  .food-card_content
+  .food-card_bottom-section
+  .food-card_order-count
+  button {
+  border-color: #f5f5f5;
+  border-width: 3px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+@media (min-width: 992px) {
+  .food-card--vertical {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    height: 235px;
+  }
+
+  .food-card--vertical .food-card_img img {
+    width: 200px;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
 }
 </style>
