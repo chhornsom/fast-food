@@ -11,6 +11,10 @@
         </material-button>
       </div>
     </div>
+    <div v-for="(item, index) in post" :key="index">
+      <h2>{{ item.title }}</h2>
+      <h2>{{ item.body }}</h2>
+    </div>
     <section>
       <div class="row">
         <div class="col-sm-6 col-md-6 col-lg-6">
@@ -135,7 +139,9 @@
         </div>
       </div>
     </section>
-
+    <div v-for="(item, index) in storePosts" :key="index">
+      <h2>{{ item.title }}</h2>
+    </div>
     <div class="row">
       <div class="col-lg-8 col-md-6 mb-md-0 mb-4">
         <project-card
@@ -256,10 +262,12 @@ import team2 from "@/assets/img/team-2.jpg";
 import team3 from "@/assets/img/team-3.jpg";
 import team4 from "@/assets/img/team-4.jpg";
 import MaterialButton from "@/components/MaterialButton.vue";
+import myPosts from "@/data/db.json";
 export default {
   name: "dashboard-default",
   data() {
     return {
+      storePosts: [],
       logoXD,
       team1,
       team2,
@@ -283,7 +291,14 @@ export default {
   created() {
     this.fetchFastFoodItems();
   },
+  mounted() {
+    this.handleGetAllPost();
+    this.fetchFastFoodItems();
+  },
   methods: {
+    async handleGetAllPost() {
+      this.storePosts = myPosts.data;
+    },
     fetchFastFoodItems() {
       fetch("https://jsonplaceholder.typicode.com/posts")
         .then((response) => response.json())
