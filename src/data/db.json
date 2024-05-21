@@ -2,32 +2,29 @@
   "status": 200,
   "message": "success",
   "data": [
-      {
-        "id": 1,
-        "title": "test 1",
-        "body": "Hello assignment",
-        "cover": "./assets/img/home-decor-2.jpg"
-      },
-      {
-        "id": 2,
-        "title": "test 2",
-        "body": "Hello assignment",
-        "cover": "./assets/img/home-decor-2.jpg"
-
-      },
-      {
-        "id": 3,
-        "title": "test 3",
-        "body": "Hello assignment",
-        "cover": "./assets/img/home-decor-2.jpg"
-
-      },
-      {
-        "id": 4,
-        "title": "test 4",
-        "body": "Hello assignment",
-        "cover": "./assets/img/home-decor-2.jpg"
-
-      }
-    ]
+    {
+      "id": 1,
+      "title": "test 1",
+      "body": "Hello assignment",
+      "cover": "[require('@/assets/img/foods/ai-generated-8619138_1280.png')]"
+    },
+    {
+      "id": 2,
+      "title": "test 2",
+      "body": "Hello assignment",
+      "cover": "[require('@/assets/img/foods/ai-generated-8619138_1280.png')]"
+    },
+    {
+      "id": 3,
+      "title": "test 3",
+      "body": "Hello assignment",
+      "cover": "[require('@/assets/img/foods/ai-generated-8619138_1280.png')]"
+    },
+    {
+      "id": 4,
+      "title": "test 4",
+      "body": "Hello assignment",
+      "cover": "[require('@/assets/img/foods/ai-generated-8619138_1280.png')]"
+    }
+  ]
 }

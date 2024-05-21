@@ -1,11 +1,25 @@
 <template>
   <div class="container-fluid">
+    <div
+    class="col-sm-3 box-upload"
+    v-for="(item, index) in storePosts" :key="index"
+  >
+    <!-- <div>
+      <img :src="item.image"/>
+    </div> -->
+    <h1>bbbbbbbbbbbbbb</h1>
+    <h4>{{ item.productId }}</h4>
+  </div>
     <div class="row mb-4 mt-4">
       <div class="col-6 d-flex align-items-center">
         <h3 class="mb-0">Categories</h3>
       </div>
       <div class="col-6 text-end">
-        <material-button color="warning" variant="gradient" @click="handleClickModal">
+        <material-button
+          color="warning"
+          variant="gradient"
+          @click="handleClickModal"
+        >
           <i class="fas fa-plus me-2"></i>
           Add New Item
         </material-button>
@@ -20,12 +34,17 @@
         <div class="col-sm-6 col-md-6 col-lg-6">
           <div class="food-card food-card--vertical">
             <div class="food-card_img">
-              <img src="https://i.imgur.com/eFWRUuR.jpg" alt="" />
+              <img
+                src="@/assets/img/foods/ai-generated-8619138_1280.png"
+                alt=""
+              />
               <a href="#!"><i class="fa fa-heart"></i></a>
             </div>
             <div class="food-card_content">
               <div class="food-card_title-section">
-                <a href="#!" class="food-card_title">Double Cheese Potato Burger</a>
+                <a href="#!" class="food-card_title"
+                  >Double Cheese Potato Burger</a
+                >
                 <a href="#!" class="food-card_author">Burger</a>
               </div>
               <div class="food-card_bottom-section">
@@ -48,12 +67,14 @@
         <div class="col-sm-6 col-md-6 col-lg-6">
           <div class="food-card food-card--vertical">
             <div class="food-card_img">
-              <img src="https://i.imgur.com/eFWRUuR.jpg" alt="" />
+              <img src="@/assets/img/foods/apple-8591539_1280.jpg" alt="" />
               <a href="#!"><i class="fa fa-heart"></i></a>
             </div>
             <div class="food-card_content">
               <div class="food-card_title-section">
-                <a href="#!" class="food-card_title">Double Cheese Potato Burger</a>
+                <a href="#!" class="food-card_title"
+                  >Double Cheese Potato Burger</a
+                >
                 <a href="#!" class="food-card_author">Burger</a>
               </div>
               <div class="food-card_bottom-section">
@@ -76,12 +97,14 @@
         <div class="col-sm-6 col-md-6 col-lg-6">
           <div class="food-card food-card--vertical">
             <div class="food-card_img">
-              <img src="https://i.imgur.com/eFWRUuR.jpg" alt="" />
+              <img src="@/assets/img/foods/asparagus-2169305_1280.jpg" alt="" />
               <a href="#!"><i class="fa fa-heart"></i></a>
             </div>
             <div class="food-card_content">
               <div class="food-card_title-section">
-                <a href="#!" class="food-card_title">Double Cheese Potato Burger</a>
+                <a href="#!" class="food-card_title"
+                  >Double Cheese Potato Burger</a
+                >
                 <a href="#!" class="food-card_author">Burger</a>
               </div>
               <div class="food-card_bottom-section">
@@ -104,12 +127,14 @@
         <div class="col-sm-6 col-md-6 col-lg-6">
           <div class="food-card food-card--vertical">
             <div class="food-card_img">
-              <img src="https://i.imgur.com/eFWRUuR.jpg" alt="" />
+              <img src="@/assets/img/foods/food-712665_1280.jpg" alt="" />
               <a href="#!"><i class="fa fa-heart"></i></a>
             </div>
             <div class="food-card_content">
               <div class="food-card_title-section">
-                <a href="#!" class="food-card_title">Double Cheese Potato Burger</a>
+                <a href="#!" class="food-card_title"
+                  >Double Cheese Potato Burger</a
+                >
                 <a href="#!" class="food-card_author">Burger</a>
               </div>
               <div class="food-card_bottom-section">
@@ -131,88 +156,111 @@
         </div>
       </div>
     </section>
-    <div v-for="(item, index) in storePosts" :key="index">
-      <h2>{{ item.title }}</h2>
-      <img :src="item.cover" alt="" />
-
-    </div>
     <div class="row">
       <div class="col-lg-8 col-md-6 mb-md-0 mb-4">
-        <project-card title="Projects"
+        <project-card
+          title="Projects"
           description="<i class='fa fa-check text-info' aria-hidden='true'></i> <span class='font-weight-bold ms-1'>30 done</span> this month"
-          :headers="['Companies', 'Members', 'Budget', 'Progress']" :projects="[
-          {
-            logo: logoXD,
-            title: 'Material XD Material XD Version',
-            members: [team1, team2, team3, team4],
-            budget: '$14,000',
-            progress: { percentage: 60, color: 'info' }
-          },
-          {
-            logo: logoAtlassian,
-            title: 'Add Progress Track',
-            members: [team2, team4],
-            budget: '$3,000',
-            progress: { percentage: 10, color: 'info' }
-          },
-          {
-            logo: logoSlack,
-            title: 'Fix Platform Errors',
-            members: [team3, team1],
-            budget: 'Not set',
-            progress: { percentage: 100, color: 'success' }
-          },
-          {
-            logo: logoSpotify,
-            title: 'Launch our Mobile App',
-            members: [team4, team3, team4, team1],
-            budget: '$20,500',
-            progress: { percentage: 100, color: 'success' }
-          },
-          {
-            logo: logoJira,
-            title: 'Add the New Pricing Page',
-            members: [team4],
-            budget: '$500',
-            progress: { percentage: 25, color: 'info' }
-          },
-          {
-            logo: logoJira,
-            title: 'Redesign New Online Shop',
-            members: [team1, team4],
-            budget: '$2,000',
-            progress: { percentage: 40, color: 'info' }
-          }
-        ]" />
+          :headers="['Companies', 'Members', 'Budget', 'Progress']"
+          :projects="[
+            {
+              logo: logoXD,
+              title: 'Material XD Material XD Version',
+              members: [team1, team2, team3, team4],
+              budget: '$14,000',
+              progress: { percentage: 60, color: 'info' }
+            },
+            {
+              logo: logoAtlassian,
+              title: 'Add Progress Track',
+              members: [team2, team4],
+              budget: '$3,000',
+              progress: { percentage: 10, color: 'info' }
+            },
+            {
+              logo: logoSlack,
+              title: 'Fix Platform Errors',
+              members: [team3, team1],
+              budget: 'Not set',
+              progress: { percentage: 100, color: 'success' }
+            },
+            {
+              logo: logoSpotify,
+              title: 'Launch our Mobile App',
+              members: [team4, team3, team4, team1],
+              budget: '$20,500',
+              progress: { percentage: 100, color: 'success' }
+            },
+            {
+              logo: logoJira,
+              title: 'Add the New Pricing Page',
+              members: [team4],
+              budget: '$500',
+              progress: { percentage: 25, color: 'info' }
+            },
+            {
+              logo: logoJira,
+              title: 'Redesign New Online Shop',
+              members: [team1, team4],
+              budget: '$2,000',
+              progress: { percentage: 40, color: 'info' }
+            }
+          ]"
+        />
       </div>
       <div class="col-lg-4 col-md-6">
-        <timeline-list class="h-100" title="Orders overview" description="<i class='fa fa-arrow-up text-success' aria-hidden='true'></i>
-        <span class='font-weight-bold'>24%</span> this month">
-          <timeline-item :icon="{
-          component: 'notifications',
-          class: 'text-success'
-        }" title="$2400 Design changes" date-time="22 DEC 7:20 PM" />
-          <TimelineItem :icon="{
-          component: 'code',
-          class: 'text-danger'
-        }" title="New order #1832412" date-time="21 DEC 11 PM" />
-          <TimelineItem :icon="{
-          component: 'shopping_cart',
-          class: 'text-info'
-        }" title="Server payments for April" date-time="21 DEC 9:34 PM" />
-          <TimelineItem :icon="{
-          component: 'credit_card',
-          class: 'text-warning'
-        }" title="New card added for order #4395133" date-time="20 DEC 2:20 AM" />
-          <TimelineItem :icon="{
-          component: 'vpn_key',
-          class: 'text-primary'
-        }" title="Unlock packages for development" date-time="18 DEC 4:54 AM" class="pb-1" />
+        <timeline-list
+          class="h-100"
+          title="Orders overview"
+          description="<i class='fa fa-arrow-up text-success' aria-hidden='true'></i>
+        <span class='font-weight-bold'>24%</span> this month"
+        >
+          <timeline-item
+            :icon="{
+              component: 'notifications',
+              class: 'text-success'
+            }"
+            title="$2400 Design changes"
+            date-time="22 DEC 7:20 PM"
+          />
+          <TimelineItem
+            :icon="{
+              component: 'code',
+              class: 'text-danger'
+            }"
+            title="New order #1832412"
+            date-time="21 DEC 11 PM"
+          />
+          <TimelineItem
+            :icon="{
+              component: 'shopping_cart',
+              class: 'text-info'
+            }"
+            title="Server payments for April"
+            date-time="21 DEC 9:34 PM"
+          />
+          <TimelineItem
+            :icon="{
+              component: 'credit_card',
+              class: 'text-warning'
+            }"
+            title="New card added for order #4395133"
+            date-time="20 DEC 2:20 AM"
+          />
+          <TimelineItem
+            :icon="{
+              component: 'vpn_key',
+              class: 'text-primary'
+            }"
+            title="Unlock packages for development"
+            date-time="18 DEC 4:54 AM"
+            class="pb-1"
+          />
         </timeline-list>
       </div>
     </div>
   </div>
-  <modal-default v-if="isModal = isModal"></modal-default>
+  <modal-default v-if="(isModal = isModal)"></modal-default>
 </template>
 <script>
 import ProjectCard from "./components/ProjectCard.vue";
@@ -231,13 +279,29 @@ import team4 from "@/assets/img/team-4.jpg";
 import MaterialButton from "@/components/MaterialButton.vue";
 import myPosts from "@/data/db.json";
 import ModalDefault from "./components/ModalDefault.vue";
-const images = require.context("@/assets/img", false, /\.png$|\.jpg$/)
+const images = require.context("@/assets/img", false, /\.png$|\.jpg$/);
 export default {
   name: "dashboard-default",
   data() {
     return {
       isModal: false,
-      storePosts: [],
+      storePosts: [
+        {
+          // image: [require("@/assets/img/foods/ai-generated-8619138_1280.png")],
+          productId: 2,
+          name: "aaaaaaaaaaaaaaa"
+        },
+        {
+          // image: [require("@/assets/img/foods/fruit-8750860_1280.jpg")],
+          productId: 3,
+          name: "aaaaaaaaaaaaaaa"
+        },
+        {
+          // image: [require("@/assets/img/foods/ai-generated-8619138_1280.png")],
+          productId: 4,
+          name: "aaaaaaaaaaaaaaa"
+        }
+      ],
       logoXD,
       team1,
       team2,
@@ -267,11 +331,11 @@ export default {
   },
   methods: {
     handleClickModal() {
-      alert("WORKING")
-      this.isModal = !this.isModal
+      alert("WORKING");
+      this.isModal = !this.isModal;
     },
     async loadImg(imgPath) {
-      return images(imgPath)
+      return images(imgPath);
     },
     async handleGetAllPost() {
       this.storePosts = myPosts.data;
@@ -471,8 +535,16 @@ a {
   margin-left: 17px;
 }
 
-.food-card .food-card_content .food-card_bottom-section .food-card_subscribers img,
-.food-card .food-card_content .food-card_bottom-section .food-card_subscribers .food-card_subscribers-count {
+.food-card
+  .food-card_content
+  .food-card_bottom-section
+  .food-card_subscribers
+  img,
+.food-card
+  .food-card_content
+  .food-card_bottom-section
+  .food-card_subscribers
+  .food-card_subscribers-count {
   height: 45px;
   width: 45px;
   border-radius: 45px;
@@ -482,11 +554,20 @@ a {
   background: #f5f5f5;
 }
 
-.food-card .food-card_content .food-card_bottom-section .food-card_subscribers .food-card_subscribers-count {
+.food-card
+  .food-card_content
+  .food-card_bottom-section
+  .food-card_subscribers
+  .food-card_subscribers-count {
   position: relative;
 }
 
-.food-card .food-card_content .food-card_bottom-section .food-card_subscribers .food-card_subscribers-count span {
+.food-card
+  .food-card_content
+  .food-card_bottom-section
+  .food-card_subscribers
+  .food-card_subscribers-count
+  span {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -505,7 +586,11 @@ a {
   width: 180px;
 }
 
-.food-card .food-card_content .food-card_bottom-section .food-card_order-count input {
+.food-card
+  .food-card_content
+  .food-card_bottom-section
+  .food-card_order-count
+  input {
   background: #f5f5f5;
   border-color: #f5f5f5;
   -webkit-box-shadow: none;
@@ -513,7 +598,11 @@ a {
   text-align: center;
 }
 
-.food-card .food-card_content .food-card_bottom-section .food-card_order-count button {
+.food-card
+  .food-card_content
+  .food-card_bottom-section
+  .food-card_order-count
+  button {
   border-color: #f5f5f5;
   border-width: 3px;
   -webkit-box-shadow: none;
