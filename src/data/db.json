@@ -5,22 +5,29 @@
       {
         "id": 1,
         "title": "test 1",
-        "body": "Hello assignment"
+        "body": "Hello assignment",
+        "cover": "./assets/img/home-decor-2.jpg"
       },
       {
         "id": 2,
         "title": "test 2",
-        "body": "Hello assignment"
+        "body": "Hello assignment",
+        "cover": "./assets/img/home-decor-2.jpg"
+
       },
       {
         "id": 3,
         "title": "test 3",
-        "body": "Hello assignment"
+        "body": "Hello assignment",
+        "cover": "./assets/img/home-decor-2.jpg"
+
       },
       {
         "id": 4,
         "title": "test 4",
-        "body": "Hello assignment"
+        "body": "Hello assignment",
+        "cover": "./assets/img/home-decor-2.jpg"
+
       }
     ]
 }
