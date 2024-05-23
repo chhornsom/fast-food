@@ -5,27 +5,15 @@
         <h3 class="mb-0">Categories</h3>
       </div>
       <div class="col-6 text-end">
-        <material-button
-          color="warning"
-          variant="gradient"
-          @click="handleClickModal"
-        >
+        <material-button color="warning" variant="gradient" @click="handleClickModal">
           <i class="fas fa-plus me-2"></i>
           Add New Item
         </material-button>
       </div>
     </div>
-    <!-- <div v-for="(item, index) in post" :key="index">
-      <h2>{{ item.title }}</h2>
-      <h2>{{ item.body }}</h2>
-    </div> -->
     <section>
       <div class="row">
-        <div
-          class="col-sm-6 col-md-6 col-lg-6"
-          v-for="(item, index) in itemCategories"
-          :key="index"
-        >
+        <div class="col-sm-6 col-md-6 col-lg-6" v-for="(item, index) in itemCategories" :key="index">
           <div class="food-card food-card--vertical">
             <div class="food-card_img">
               <img :src="item.image" alt="" />
@@ -34,11 +22,11 @@
             <div class="food-card_content">
               <div class="food-card_title-section">
                 <a href="#!" class="food-card_title">{{ item.title }}</a>
-                <a href="#!" class="food-card_author">Burger</a>
+                <a href="#!" class="food-card_author">{{ item.name }}</a>
               </div>
               <div class="food-card_bottom-section">
                 <div class="space-between">
-                  <div><span class="fa fa-fire"></span> 220 - 280 Kcal</div>
+                  <div><span class="fa fa-fire"></span>{{ item.totalInStock }}</div>
                   <div class="pull-right">
                     <span class="badge badge-success">Veg</span>
                   </div>
@@ -46,7 +34,7 @@
                 <hr />
                 <div class="space-between">
                   <div class="food-card_price">
-                    <span>5.99$</span>
+                    <span>{{ item.price }}</span>
                   </div>
                 </div>
               </div>
@@ -62,13 +50,13 @@
             <div class="food-card_content">
               <div class="food-card_title-section">
                 <a href="#!" class="food-card_title"
-                  >Double Cheese Potato Burger</a
+                  >Double Cheese Potato {{}}</a
                 >
-                <a href="#!" class="food-card_author">Burger</a>
+                <a href="#!" class="food-card_author">{{}}</a>
               </div>
               <div class="food-card_bottom-section">
                 <div class="space-between">
-                  <div><span class="fa fa-fire"></span> 220 - 280 Kcal</div>
+                  <div><span class="fa fa-fire"></span>{{}}</div>
                   <div class="pull-right">
                     <span class="badge badge-success">Veg</span>
                   </div>
@@ -76,7 +64,7 @@
                 <hr />
                 <div class="space-between">
                   <div class="food-card_price">
-                    <span>5.99$</span>
+                    <span>{{}}</span>
                   </div>
                 </div>
               </div>
@@ -189,13 +177,8 @@
       </div>
     </div> -->
   </div>
-  <modal-component
-    modalId="modal-add-new"
-    :toggleModal="toggleModalAddNew"
-    v-if="itemCategories"
-    :itemCategories="itemCategories"
-    @handleModalAction="handleCreateItem"
-  ></modal-component>
+  <modal-component modalId="modal-add-new" :toggleModal="toggleModalAddNew" v-if="itemCategories"
+    :itemCategories="itemCategories" @handleModalAction="handleCreateItem"></modal-component>
 </template>
 <script>
 // import ProjectCard from "./components/ProjectCard.vue";
@@ -237,26 +220,26 @@ export default {
         {
           id: 1,
           image: [require("@/assets/img/foods/ai-generated-8619138_1280.png")],
-          title: "ABC",
-          name: "Burger",
+          title: "Khmer Food",
+          name: "ពងទាចៀន",
           totalInStock: "100 - 555",
-          price: "99$"
+          price: "9$"
         },
         {
-          id: 1,
-          image: [require("@/assets/img/foods/ai-generated-8619138_1280.png")],
-          title: "ABC",
-          name: "Burger",
-          totalInStock: "100 - 555",
-          price: "99$"
+          id: 2,
+          image: [require("@/assets/img/foods/apple-8591539_1280.jpg")],
+          title: "Fruits",
+          name: "Apple",
+          totalInStock: "10 - 20",
+          price: "10$"
         },
         {
-          id: 1,
-          image: [require("@/assets/img/foods/ai-generated-8619138_1280.png")],
-          title: "ABC",
-          name: "Burger",
-          totalInStock: "100 - 555",
-          price: "99$"
+          id: 3,
+          image: [require("@/assets/img/foods/asparagus-2169305_1280.jpg")],
+          title: "Khmer Food",
+          name: "សាច់អាំង",
+          totalInStock: "20 - 55",
+          price: "2$"
         }
       ],
       logoXD,
@@ -294,7 +277,7 @@ export default {
       this.toggleModalAddNew = !this.toggleModalAddNew;
     },
     async handleCreateItem(filterItem) {
-      this.itemCategories = (filterItem);
+      this.itemCategories.push(filterItem);
     },
     // async handleGetAllPost() {
     //   this.storePosts = storiesData.data;
@@ -369,6 +352,11 @@ export default {
       }).then(() => {
         this.posts = this.posts.filter((post) => post.id !== id);
       });
+    }
+  },
+  watch: {
+    toggleModalAddNew() {
+      // this.itemCategories = {};
     }
   }
 };
@@ -487,16 +475,8 @@ a {
   margin-left: 17px;
 }
 
-.food-card
-  .food-card_content
-  .food-card_bottom-section
-  .food-card_subscribers
-  img,
-.food-card
-  .food-card_content
-  .food-card_bottom-section
-  .food-card_subscribers
-  .food-card_subscribers-count {
+.food-card .food-card_content .food-card_bottom-section .food-card_subscribers img,
+.food-card .food-card_content .food-card_bottom-section .food-card_subscribers .food-card_subscribers-count {
   height: 45px;
   width: 45px;
   border-radius: 45px;
@@ -506,20 +486,11 @@ a {
   background: #f5f5f5;
 }
 
-.food-card
-  .food-card_content
-  .food-card_bottom-section
-  .food-card_subscribers
-  .food-card_subscribers-count {
+.food-card .food-card_content .food-card_bottom-section .food-card_subscribers .food-card_subscribers-count {
   position: relative;
 }
 
-.food-card
-  .food-card_content
-  .food-card_bottom-section
-  .food-card_subscribers
-  .food-card_subscribers-count
-  span {
+.food-card .food-card_content .food-card_bottom-section .food-card_subscribers .food-card_subscribers-count span {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -538,11 +509,7 @@ a {
   width: 180px;
 }
 
-.food-card
-  .food-card_content
-  .food-card_bottom-section
-  .food-card_order-count
-  input {
+.food-card .food-card_content .food-card_bottom-section .food-card_order-count input {
   background: #f5f5f5;
   border-color: #f5f5f5;
   -webkit-box-shadow: none;
@@ -550,11 +517,7 @@ a {
   text-align: center;
 }
 
-.food-card
-  .food-card_content
-  .food-card_bottom-section
-  .food-card_order-count
-  button {
+.food-card .food-card_content .food-card_bottom-section .food-card_order-count button {
   border-color: #f5f5f5;
   border-width: 3px;
   -webkit-box-shadow: none;
