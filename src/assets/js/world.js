@@ -312,9 +312,9 @@
         (e.applyAttr = function (t, e) {
           this.node.setAttribute(f.hyphenate(t), e);
         }),
-        (e.remove = function () {
-          this.node.parentNode.removeChild(this.node);
-        }),
+        // (e.remove = function () {
+        //   this.node.parentNode.removeChild(this.node);
+        // }),
         t
       );
     })(),

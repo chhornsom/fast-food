@@ -16,8 +16,16 @@
         <div class="col-sm-6 col-md-6 col-lg-6" v-for="(item, index) in itemCategories" :key="index">
           <div class="food-card food-card--vertical">
             <div class="food-card_img">
-              <img :src="item.image" alt="" />
+              <img :src="item.image" :alt="item.image" />
               <a href="#!"><i class="fa fa-heart"></i></a>
+            </div>
+            <div class="ms-auto text-end">
+              <a class="btn btn-link text-danger text-gradient px-3 mb-0" href="javascript:;">
+                <i class="far fa-trash-alt me-2" aria-hidden="true"></i>Delete
+              </a>
+              <a class="btn btn-link text-dark px-3 mb-0" href="javascript:;">
+                <i class="fas fa-pencil-alt text-dark me-2" aria-hidden="true"></i>Edit
+              </a>
             </div>
             <div class="food-card_content">
               <div class="food-card_title-section">
@@ -41,144 +49,15 @@
             </div>
           </div>
         </div>
-        <!-- <div class="col-sm-6 col-md-6 col-lg-6">
-          <div class="food-card food-card--vertical">
-            <div class="food-card_img">
-              <img src="@/assets/img/foods/apple-8591539_1280.jpg" alt="" />
-              <a href="#!"><i class="fa fa-heart"></i></a>
-            </div>
-            <div class="food-card_content">
-              <div class="food-card_title-section">
-                <a href="#!" class="food-card_title"
-                  >Double Cheese Potato {{}}</a
-                >
-                <a href="#!" class="food-card_author">{{}}</a>
-              </div>
-              <div class="food-card_bottom-section">
-                <div class="space-between">
-                  <div><span class="fa fa-fire"></span>{{}}</div>
-                  <div class="pull-right">
-                    <span class="badge badge-success">Veg</span>
-                  </div>
-                </div>
-                <hr />
-                <div class="space-between">
-                  <div class="food-card_price">
-                    <span>{{}}</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> -->
+
       </div>
     </section>
-    <!-- <div class="row">
-      <div class="col-lg-8 col-md-6 mb-md-0 mb-4">
-        <project-card
-          title="Projects"
-          description="<i class='fa fa-check text-info' aria-hidden='true'></i> <span class='font-weight-bold ms-1'>30 done</span> this month"
-          :headers="['Companies', 'Members', 'Budget', 'Progress']"
-          :projects="[
-            {
-              logo: logoXD,
-              title: 'Material XD Material XD Version',
-              members: [team1, team2, team3, team4],
-              budget: '$14,000',
-              progress: { percentage: 60, color: 'info' }
-            },
-            {
-              logo: logoAtlassian,
-              title: 'Add Progress Track',
-              members: [team2, team4],
-              budget: '$3,000',
-              progress: { percentage: 10, color: 'info' }
-            },
-            {
-              logo: logoSlack,
-              title: 'Fix Platform Errors',
-              members: [team3, team1],
-              budget: 'Not set',
-              progress: { percentage: 100, color: 'success' }
-            },
-            {
-              logo: logoSpotify,
-              title: 'Launch our Mobile App',
-              members: [team4, team3, team4, team1],
-              budget: '$20,500',
-              progress: { percentage: 100, color: 'success' }
-            },
-            {
-              logo: logoJira,
-              title: 'Add the New Pricing Page',
-              members: [team4],
-              budget: '$500',
-              progress: { percentage: 25, color: 'info' }
-            },
-            {
-              logo: logoJira,
-              title: 'Redesign New Online Shop',
-              members: [team1, team4],
-              budget: '$2,000',
-              progress: { percentage: 40, color: 'info' }
-            }
-          ]"
-        />
-      </div>
-      <div class="col-lg-4 col-md-6">
-        <timeline-list
-          class="h-100"
-          title="Orders overview"
-          description="<i class='fa fa-arrow-up text-success' aria-hidden='true'></i>
-        <span class='font-weight-bold'>24%</span> this month"
-        >
-          <timeline-item
-            :icon="{
-              component: 'notifications',
-              class: 'text-success'
-            }"
-            title="$2400 Design changes"
-            date-time="22 DEC 7:20 PM"
-          />
-          <TimelineItem
-            :icon="{
-              component: 'code',
-              class: 'text-danger'
-            }"
-            title="New order #1832412"
-            date-time="21 DEC 11 PM"
-          />
-          <TimelineItem
-            :icon="{
-              component: 'shopping_cart',
-              class: 'text-info'
-            }"
-            title="Server payments for April"
-            date-time="21 DEC 9:34 PM"
-          />
-          <TimelineItem
-            :icon="{
-              component: 'credit_card',
-              class: 'text-warning'
-            }"
-            title="New card added for order #4395133"
-            date-time="20 DEC 2:20 AM"
-          />
-          <TimelineItem
-            :icon="{
-              component: 'vpn_key',
-              class: 'text-primary'
-            }"
-            title="Unlock packages for development"
-            date-time="18 DEC 4:54 AM"
-            class="pb-1"
-          />
-        </timeline-list>
-      </div>
-    </div> -->
   </div>
   <modal-component modalId="modal-add-new" :toggleModal="toggleModalAddNew" v-if="itemCategories"
     :itemCategories="itemCategories" @handleModalAction="handleCreateItem"></modal-component>
+    <div v-for="(item, index) in getData.customers" :key="index">
+    <h1>{{ item.company_name }}</h1>
+    </div>
 </template>
 <script>
 // import ProjectCard from "./components/ProjectCard.vue";
@@ -200,6 +79,7 @@ import storiesData from "@/data/db.json";
 const img = require.context("@/assets/img/foods", false, /\.png$|\.jpg$/);
 const aaa = "@/assets/img/foods/apple-8591539_1280.jpg";
 import ModalComponent from "./components/ModalList.vue";
+import DataDb from "../data/db.json"
 
 export default {
   components: {
@@ -216,32 +96,8 @@ export default {
       stories: storiesData,
       aaa: aaa,
       toggleModalAddNew: false,
-      itemCategories: [
-        {
-          id: 1,
-          image: [require("@/assets/img/foods/ai-generated-8619138_1280.png")],
-          title: "Khmer Food",
-          name: "ពងទាចៀន",
-          totalInStock: "100 - 555",
-          price: "9$"
-        },
-        {
-          id: 2,
-          image: [require("@/assets/img/foods/apple-8591539_1280.jpg")],
-          title: "Fruits",
-          name: "Apple",
-          totalInStock: "10 - 20",
-          price: "10$"
-        },
-        {
-          id: 3,
-          image: [require("@/assets/img/foods/asparagus-2169305_1280.jpg")],
-          title: "Khmer Food",
-          name: "សាច់អាំង",
-          totalInStock: "20 - 55",
-          price: "2$"
-        }
-      ],
+      getData: DataDb,
+      itemCategories: DataDb.categories,
       logoXD,
       team1,
       team2,
@@ -263,11 +119,9 @@ export default {
     };
   },
   created() {
-    this.fetchFastFoodItems();
   },
   mounted() {
     // this.handleGetAllPost();
-    this.fetchFastFoodItems();
   },
   methods: {
     loadImg(imgPath) {
@@ -278,80 +132,6 @@ export default {
     },
     async handleCreateItem(filterItem) {
       this.itemCategories.push(filterItem);
-    },
-    // async handleGetAllPost() {
-    //   this.storePosts = storiesData.data;
-    // },
-    fetchFastFoodItems() {
-      fetch("https://jsonplaceholder.typicode.com/posts")
-        .then((response) => response.json())
-        .then((posts) => {
-          this.posts = posts;
-        });
-    },
-    addNewItem() {
-      fetch("https://jsonplaceholder.typicode.com/posts", {
-        method: "POST",
-        body: JSON.stringify(this.newPost),
-        headers: {
-          "Content-type": "application/json; charset=UTF-8"
-        }
-      })
-        .then((response) => response.json())
-        .then((post) => {
-          this.posts.unshift(post);
-          this.newPost.name = "";
-          this.newPost.title = "";
-          this.newPost.product_image = "";
-          this.newPost.create_at = "";
-        });
-    },
-    editItem(post) {
-      this.editingPost = post;
-      this.newPost.name = post.name;
-      this.newPost.price = post.price;
-      this.newPost.product_image = post.product_image;
-      this.newPost.create_at = post.create_at;
-    },
-    updateItem() {
-      fetch(
-        `https://jsonplaceholder.typicode.com/posts/${this.editingPost.id}`,
-        {
-          method: "PUT",
-          body: JSON.stringify({
-            name: this.newPost.name,
-            price: this.newPost.price,
-            product_image: this.newPost.product_image,
-            create_at: this.newPost.create_at,
-            // userId: this.editingPost.userId,
-            id: this.editingPost.id
-          }),
-          headers: {
-            "Content-type": "application/json; charset=UTF-8"
-          }
-        }
-      )
-        .then((response) => response.json())
-        .then((updatedPost) => {
-          const index = this.posts.findIndex(
-            (post) => post.id === updatedPost.id
-          );
-          if (index !== -1) {
-            this.posts.splice(index, 1, updatedPost);
-          }
-          this.newPost.name = "";
-          this.newPost.price = "";
-          this.newPost.product_image = "";
-          this.newPost.create_at = "";
-          this.editingPost = null;
-        });
-    },
-    deleteItem(id) {
-      fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
-        method: "DELETE"
-      }).then(() => {
-        this.posts = this.posts.filter((post) => post.id !== id);
-      });
     }
   },
   watch: {
